@@ -1,0 +1,27 @@
+참조 : https://dart.dev/overview
+
+1. Optimized for UI - UI 에 최적화
+2. Productive for enviroment - 생산적인 환경
+3. Fast on all platform - 모든 플랫폼에서 빠름
+
+JIT - Just In Time
+AOT - Ahead Of TIme
+
+컴파일을 하는 것이 좋은 것 만은 아니다.
+ - 하나를 빠꿀떄 마다 다시 컴파일을 해야한다.
+
+DART를 활용하여 개발할 때는 VM을 통하여 코드가 돌아가서 느리지만 바로바로 볼 수 있고, 
+완료된 후, VM이 아닌 실제로 컴파일을 하여 빠르게 돌아갈 수 있도록 한다.
+
+Dart Native (machine code JIT and AOT)
+During development, a fast developer cycle is critical for iteration. The Dart VM offers a just-in-time compiler (JIT) with incremental recompilation (enabling hot reload), live metrics collections (powering DevTools), and rich debugging support.
+
+When apps are ready to be deployed to production—whether you’re publishing to an app store or deploying to a production backend—the Dart ahead-of-time (AOT) compiler can compile to native ARM or x64 machine code. Your AOT-compiled app launches with consistent, short startup time.
+
+The AOT-compiled code runs inside an efficient Dart runtime that enforces the sound Dart type system and manages memory using fast object allocation and a generational garbage collector.
+
+Null Safty가 존재한다.
+Dart offers sound null safety, meaning that values can’t be null unless you say they can be. With sound null safety, Dart can protect you from null exceptions at runtime through static code analysis. Unlike many other null-safe languages, when Dart determines that a variable is non-nullable, that variable is always non-nullable. If you inspect your running code in the debugger, you’ll see that non-nullability is retained at runtime (hence sound null safety).
+
+Flutter와 Dart가 개발 된 회사가 같다.(GOOGLE)
+- Flutter를 위하여 언어가 변할 수 있다.
